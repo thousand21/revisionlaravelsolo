@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,10 @@ Route::get('/dashboardd', function () {
 });
 
 Route::resource('/portfolio',PortfolioController::class);
+
+Route::post('/sendmail',[MailController::class,'sendMail'])
+
+->name('sendMail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
