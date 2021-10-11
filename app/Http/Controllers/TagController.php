@@ -14,7 +14,15 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        $tag = Tag::find(1);
+
+foreach ($tag->posts as $post) {
+    //
+}
+
+foreach ($tag->videos as $video) {
+    //
+}
     }
 
     /**

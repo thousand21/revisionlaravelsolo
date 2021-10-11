@@ -8,10 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
-    $post = Post::find(1);
-
-foreach ($post->tags as $tag) {
-}
+    
     public function posts()
     {
         return $this->morphedByMany(Post::class, 'taggable');

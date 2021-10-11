@@ -14,7 +14,12 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $post = Post::find(1);
+
+foreach ($post->tags as $tag) {
+    //
+}
+
     }
 
     /**
